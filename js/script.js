@@ -2,16 +2,18 @@
 //Creare un oggetto che descriva uno studente, con le seguenti proprietà: nome, cognome e età.
  //Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell’oggetto.
 
+ //OGGETTO
  var studentDates =
 
-  { nome:"Perizat", cognome: "Shatyrbekova", eta: 26}
+       //PROPRIETA'
+  { Nome:"Perizat", Cognome: "Shatyrbekova", Età: 26}
     
 console.log(studentDates);
 
 
 for ( var key in studentDates){
     console.log(key, studentDates [key])
-   document.getElementById('studenti').innerHTML+= key + ':'+ '  '+studentDates  [key];
+   document.getElementById('studenti').innerHTML+= '  '+ key + ':'+ '  '+ ' '+studentDates  [key] + '.';
 }
 
 
@@ -39,16 +41,21 @@ var studentiBoolean ={
     classmates:[]
 
 }
-while (studentiBoolean.classmates.length <1){
+while (studentiBoolean.classmates.length <2){
 
-    var classmateName = prompt('Inserisci il nome');
-    var classmateSurname= prompt('Inserisci il cognome');
-    var classmateAge = prompt ('Inserisci l\'età');
+    var classmateName = prompt('Inserisci il nome dello studente');
+    var classmateSurname= prompt('Inserisci il cognome dello studente');
+    var classmateAge = prompt ('Inserisci l\'età dello studente' );
+    if (isNaN (classmateAge)){
+        alert('Inserisci l\'età dello studente');
+        classmateAge = prompt ('Inserisci l\'età dello studente ');
+
+    }
 
     studentiBoolean.classmates.push({
-        nome: classmateName,
-        cognome: classmateSurname,
-        età: classmateAge
+        Nome: classmateName,
+        Cognome: classmateSurname,
+        Età: classmateAge
     });
 }
 
@@ -58,7 +65,9 @@ console.log (studentiBoolean.classmates);
 for ( var y=0; y <studentiBoolean.classmates.length; y++){
 
     for (var key in studentiBoolean.classmates[y]){
-        console.log(key, studentiBoolean.classmates[y][key])
+        console.log(key, studentiBoolean.classmates[y][key]);
+        document.getElementById('studenti').innerHTML+= '<br>'+ key+':'+ studentiBoolean.classmates[y][key];
+
     }
 
 }
