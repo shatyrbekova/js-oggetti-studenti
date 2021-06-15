@@ -24,8 +24,20 @@ for ( var key in studentDates){
 
  }, 2000);
  
+// Con Array
 
+var booleaners =[
 
+    {
+        name: 'Adina', cognome: 'Pop', age: 20
+    },
+    {
+        name: 'Dayron', cognome: 'Aguliera', age: 25
+    }
+];
+
+console.log(booleaners[1]);
+console.log(booleaners[0].cognome);
 
 //  PARTE 2
 // Creare un array di oggetti di studenti. Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome. 
