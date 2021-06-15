@@ -11,11 +11,11 @@ console.log(studentDates);
 
 for ( var key in studentDates){
     console.log(key, studentDates [key])
+   document.getElementById('studenti').innerHTML+= key + ':'+ '  '+studentDates  [key];
 }
 
-var studentInformations = document.getElementById('studenti');
 
-studentInformations.innerHTML+= studentDates;
+
 
 //  PARTE 2
 // Creare un array di oggetti di studenti. Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome. 
